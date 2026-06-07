@@ -6,16 +6,16 @@ const copy = {
   EN: {
     headline: "Your Daily Reminder.\nRooted in Tradition.",
     sub: "Quranic verses, hadith, and dhikr for every moment of your day.",
-    cta: "Download on App Store",
+    cta: "App Store - Coming Soon",
     secondary: "Learn More",
     badge: "Free · No Tracking · Offline",
   },
   ID: {
     headline: "Pengingat Harianmu.\nBerakar dari Tradisi.",
     sub: "Ayat Al-Qur'an, hadis, dan dzikir untuk setiap momen harimu.",
-    cta: "Unduh di App Store",
+    cta: "App Store - Segera Hadir",
     secondary: "Pelajari Lebih",
-    badge: "Gratis · Open Source · Offline",
+    badge: "Gratis · Tanpa Pelacakan · Offline",
   },
 };
 
@@ -61,7 +61,7 @@ export default function Hero({ lang }: HeroProps) {
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <a
-                href="#download"
+                href="#"
                 id="download"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#8B5E3C] text-white font-medium rounded-xl hover:bg-[#6B4928] active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg"
               >
@@ -206,7 +206,7 @@ function AppMockup() {
                   >
                     {c}
                   </span>
-                )
+                ),
               )}
             </div>
           </div>
