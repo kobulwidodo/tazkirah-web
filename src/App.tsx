@@ -8,7 +8,6 @@ import AppPreview from './components/AppPreview'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
-
 type Lang = 'EN' | 'ID'
 
 export default function App() {

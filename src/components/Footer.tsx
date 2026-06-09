@@ -6,12 +6,22 @@ interface Props {
 const copy = {
   EN: {
     tagline: "Daily reminders, rooted in tradition.",
-    links: ["About", "Privacy", "Terms", "Contact"],
+    links: [
+      { name: "About", href: "#" },
+      { name: "Privacy", href: "/privacy" },
+      { name: "Terms", href: "#" },
+      { name: "Contact", href: "#" }
+    ],
     copyright: "© 2026 Tazkirah. Built with love for Muslim Community.",
   },
   ID: {
     tagline: "Pengingat harian, berakar dari tradisi.",
-    links: ["Tentang", "Privasi", "Ketentuan", "Kontak"],
+    links: [
+      { name: "Tentang", href: "#" },
+      { name: "Privasi", href: "/privacy" },
+      { name: "Ketentuan", href: "#" },
+      { name: "Kontak", href: "#" }
+    ],
     copyright: "© 2026 Tazkirah. Dibuat dengan cinta untuk Komunitas Muslim.",
   },
 };
@@ -53,11 +63,11 @@ export default function Footer({ lang, onLangToggle }: Props) {
           >
             {t.links.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.name}
+                href={link.href}
                 className="text-[#2C2C2C]/60 text-sm hover:text-[#8B5E3C] transition-colors duration-200 w-fit"
               >
-                {link}
+                {link.name}
               </a>
             ))}
             <button
