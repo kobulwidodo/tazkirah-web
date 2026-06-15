@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router'
 
 interface NavbarProps {
   lang: 'EN' | 'ID'
@@ -60,12 +61,12 @@ export default function Navbar({ lang, onLangToggle }: NavbarProps) {
               <span className={lang === 'ID' ? 'font-semibold' : 'text-[#8B5E3C]/60'}>ID</span>
             </button>
 
-            <a
-              href="#download"
+            <Link
+              to="/d"
               className="px-4 py-2 bg-[#8B5E3C] text-white text-sm font-medium rounded-lg hover:bg-[#6B4928] active:scale-[0.98] transition-all duration-200"
             >
               Download
-            </a>
+            </Link>
           </div>
         </nav>
       </header>

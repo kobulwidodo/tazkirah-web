@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 interface Props {
   lang: "EN" | "ID";
 }
@@ -6,8 +8,8 @@ const copy = {
   EN: {
     title: "Start Your Daily Reminder Today",
     sub: "Free. No tracking.",
-    appStore: "App Store - Coming Soon",
-    playStore: "Google Play — Coming Soon",
+    appStore: "App Store",
+    playStore: "Google Play",
     ayah: "وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ",
     ayahTrans:
       '"And remind, for indeed the reminder benefits the believers." — Adh-Dhariyat 51:55',
@@ -15,8 +17,8 @@ const copy = {
   ID: {
     title: "Mulai Pengingat Harianmu Hari Ini",
     sub: "Gratis. Tanpa pelacakan.",
-    appStore: "App Store - Segera Hadir",
-    playStore: "Google Play — Segera Hadir",
+    appStore: "App Store",
+    playStore: "Google Play",
     ayah: "وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ",
     ayahTrans:
       '"Dan berilah peringatan, karena sesungguhnya peringatan itu bermanfaat bagi orang-orang mukmin." — Adz-Dzariyat 51:55',
@@ -79,8 +81,8 @@ export default function CTA({ lang }: Props) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          {/* <a
-            href="#"
+          <Link
+            to="/d"
             className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-white text-[#8B5E3C] font-semibold rounded-xl hover:bg-[#FDF6EC] active:scale-[0.98] transition-all duration-200 shadow-lg text-[0.95rem]"
           >
             <svg
@@ -92,25 +94,11 @@ export default function CTA({ lang }: Props) {
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
             </svg>
             {t.appStore}
-          </a> */}
-          <span
-            className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-transparent border-2 border-white/30 text-white/60 rounded-xl cursor-not-allowed text-[0.95rem] select-none"
-            aria-label="App Store — Coming Soon"
-          >
-            <svg
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M3.18 23.76c.3.17.65.19.98.07l13.12-7.57-2.9-2.9-11.2 10.4zM.5 1.4C.19 1.72 0 2.22 0 2.88v18.24c0 .66.19 1.16.5 1.48l.08.08 10.21-10.21v-.24L.58 1.32.5 1.4zM20.37 10.04l-2.72-1.57-3.22 3.22 3.22 3.22 2.74-1.58c.78-.45.78-1.84-.02-2.29zM3.18.24L16.3 7.81l-2.9 2.9L3.18.32l-.0-.08z" />
-            </svg>
-            {t.appStore}
-          </span>
+          </Link>
 
-          <span
-            className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-transparent border-2 border-white/30 text-white/60 rounded-xl cursor-not-allowed text-[0.95rem] select-none"
-            aria-label="Google Play — Coming Soon"
+          <Link
+            to="/d"
+            className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-transparent border-2 border-white/40 text-white rounded-xl hover:bg-white/10 active:scale-[0.98] transition-all duration-200 text-[0.95rem]"
           >
             <svg
               className="w-5 h-5"
@@ -121,7 +109,7 @@ export default function CTA({ lang }: Props) {
               <path d="M3.18 23.76c.3.17.65.19.98.07l13.12-7.57-2.9-2.9-11.2 10.4zM.5 1.4C.19 1.72 0 2.22 0 2.88v18.24c0 .66.19 1.16.5 1.48l.08.08 10.21-10.21v-.24L.58 1.32.5 1.4zM20.37 10.04l-2.72-1.57-3.22 3.22 3.22 3.22 2.74-1.58c.78-.45.78-1.84-.02-2.29zM3.18.24L16.3 7.81l-2.9 2.9L3.18.32l-.0-.08z" />
             </svg>
             {t.playStore}
-          </span>
+          </Link>
         </div>
       </div>
     </section>
