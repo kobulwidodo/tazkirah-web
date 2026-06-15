@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 // TODO: replace with the REAL App Store URL (the app is published).
-const APP_STORE_URL = "https://apps.apple.com/app/tazkirah/id000000000";
+const APP_STORE_URL =
+  "https://apps.apple.com/us/app/tazkirah-islamic-reminder/id6776751662";
 const INSTAGRAM_URL = "https://instagram.com/tazkirah.app";
 
 // Expected Google Play release date.
